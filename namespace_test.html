@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test namespace.js</title>
+    <script src="namespace.js"></script>
+  </head>
+  <body>
+    <script>
+namespace('ajs.js.util');
+
+console.log(ajs);
+
+ajs.js.util.stringToBytes = function stringToBytes(str) {
+  return [].slice.call(str).map(function(s) {
+    return s.charCodeAt(0) & 0xff;
+  });
+};
+
+console.log(ajs.js.util.stringToBytes('abc'));
+    </script>
+  </body>
+</html>
