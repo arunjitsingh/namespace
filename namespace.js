@@ -2,6 +2,7 @@
  * @fileoverview Creating namespaces.
  * @author Arunjit Singh <arunjit@me.com>
  * @license MIT license. This notice must be included in all distributions.
+ *     @copyright 2011 Arunjit Singh (arunjit@me.com).
  *     @see //LICENSE for details.
  *     @see http://www.opensource.org/licenses/mit-license.php for details.
  */
