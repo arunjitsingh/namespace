@@ -2,12 +2,13 @@
  * @fileoverview Creating namespaces.
  * @author Arunjit Singh <arunjit@me.com>
  * @license MIT license. This notice must be included in all distributions.
+ *     @copyright 2012 Arunjit Singh (arunjit@me.com).
  *     @see //LICENSE for details.
  *     @see http://www.opensource.org/licenses/mit-license.php for details.
  */
 /**
  * Namespace to avoid global collisions.
- * @this The global object (window or module.exports).
+ * @this {(Window|Object)} The global object (window or module.exports).
  */
 (function (global) {
   if (global['namespace']) {
