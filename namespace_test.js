@@ -1,3 +1,4 @@
+// TODO(arunjitsingh): These need to be proper unit tests!
 var namespace = require('./namespace').namespace;
 
 namespace('ajs.js.util');
