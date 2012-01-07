@@ -9,23 +9,20 @@
  * Namespace to avoid global collisions.
  * @this The global object (window or module.exports).
  */
-(function (ns) {
-  if (ns['namespace']) {
-    ns['old_namespace'] = ns['namespace'];
+(function (global) {
+  if (global['namespace']) {
+    global['old_namespace'] = global['namespace'];
   }
   /**
    * Creates a namespace from a '.'-separated string and an optional parent
    * object.
    * @param {String} ns The namespace to create.
-   * @param {Object=} parent The parent object. Defaults to {this}, whatever it
-   *     may be.
-   * @this {Object} Whatever the global/scoped object is. If running within a
-   *     closure, you must provide a {parent} object.
+   * @param {Object=} opt_parent The parent object. Defaults to the
+   *     {@code global} object.
    */
-  ns['namespace'] = function namespace(ns, parent) {
-    parent = parent || this;
-    var parts = ns.split('.'),
-      ref = parent;
+  global['namespace'] = function namespace(ns, opt_parent) {
+    var ref = opt_parent || global;
+    var parts = ns.split('.');
 
     parts.forEach(function(part) {
       ref[part] = ref[part] || {};
